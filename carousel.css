@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.center{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    width: 100%;
+}
+.carousel
+{
+    position: relative;
+    height: 600px;
+    /* margin-top: 150px; */
+    perspective: 1500px;
+}
+.carousel .carousel-item {
+    width: 264px;
+}
+.carousel .carousel-item img
+{
+    /* height: 300px;
+    max-width: 170px; */
+    transform: translateX(-2px) translateY(15px) !important;
+    /* transform: scale(1.1) !important; */
+}
+.mobile
+{
+    /* width: 257px;
+    height: 349px; */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -38%);
+    z-index: 1000,
+}
+.carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-perspective: 500px;
+    perspective: 500px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%
+}
+
+.carousel.carousel-slider {
+    top: 0;
+    left: 0
+}
+
+.carousel.carousel-slider .carousel-fixed-item {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 1
+}
+
+.carousel.carousel-slider .carousel-fixed-item.with-indicators {
+    bottom: 68px
+}
+
+.carousel.carousel-slider .carousel-item {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.carousel.carousel-slider .carousel-item h2 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px
+}
+
+.carousel.carousel-slider .carousel-item p {
+    font-size: 15px
+}
+
+.carousel .carousel-item {
+    visibility: hidden;
+    /* width: 200px;
+    height: 200px; */
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.carousel .carousel-item>img {
+    width: 100%
+}
+.carousel-nav{
+    cursor: pointer;
+    transition: all ease 0.2
+    s;
+
+}
+.right-arrow{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    border: 1px solid #57BA6A;
+    color: #fff;
+    /* padding: 20px; */
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #57BA6A;
+    font-size: 25px;
+}
+.left-arrow {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border: 1px solid #57BA6A;
+    color: #fff;
+    /* padding: 20px; */
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #57BA6A;
+    font-size: 25px;
+}
+.left-arrow:hover, .right-arrow:hover{
+    background-color: #fff;
+    color: #57BA6A;
+
+}
+/* .carousel .indicators {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0
+}
+
+.carousel .indicators .indicator-item {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    margin: 24px 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    border-radius: 50%
+}
+
+.carousel .indicators .indicator-item.active {
+    background-color: #fff
+}
+
+.carousel.scrolling .carousel-item .materialboxed,
+.carousel .carousel-item:not(.active) .materialboxed {
+    pointer-events: none
+} */
+.carousel-indicators {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.carousel-indicators .dot {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 4px;
+    background-color: #57BA6A;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: ease 0.3;
+}
+
+.carousel-indicators .dot.active {
+    transform: scale(1.2);
+}
+
+/* Additional styles to center and style the dots */
+
