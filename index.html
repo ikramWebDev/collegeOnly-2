@@ -75,7 +75,7 @@
         <div class="about-us-content">
           <img src="./assets/Star 13.png" alt="" />
           <div class="about-us-heading">
-            <div class="about-heading">
+            <div class="about-heading container">
               <h2>About Our App</h2>
               <p>
                 As your ultimate companion, CollegeOnly improves your college
@@ -91,7 +91,7 @@
           <div class="about-experince-design-img">
             <img src="./assets/about-us-img-layer.png" alt="" />
           </div>
-          <div class="about-experince-design-content row">
+          <div class="about-experince-design-content">
             <div class="about-experince-card">
               <div>
                 <img src="./assets/check icon.png" alt="" />
@@ -217,7 +217,7 @@
 
       <!-- our app interface -->
 
-      <section class="our-app" style="padding: 0">
+      <section class="our-app">
         <div class="interface-background-img">
           <img src="./assets/interface-bg.webp" alt="" />
         </div>
@@ -266,15 +266,8 @@
           </div>
           </div>
         </div>
-
-        <!-- /////////////////////// -->
-
-        <!-- /////////////////////// -->
         <!-- /* ////////////Download App now////////// */ -->
-        <div
-          class="app-networking-container container"
-          style="padding: 100px 0 100px 0"
-        >
+        <div class="app-networking-container container">
           <div class="app-networking-left">
             <div class="app-networking-title">
               <h2>Download App Now</h2>
@@ -388,13 +381,6 @@
                   id="videoElement"
                   poster="./assets/use-app-down-img.webp"
                   src="./assets/Earth_Rotation_Loop_[FREE_TO_USE](720p).mp4"
-                  style="
-                    width: 770px;
-                    height: 330px;
-                    object-fit: cover;
-                    border-radius: 10px;
-                    overflow: hidden;
-                  "
                 ></video>
               </div>
             </div>
@@ -410,7 +396,7 @@
             <img src="./assets/contact-us-bg.png" alt="" />
           </div>
           <div class="contact-form container">
-            <div class="contact-form-left" style="width: 40%">
+            <div class="contact-form-left" >
               <div class="contact-form-details">
                 <div class="contact-info">
                   <h4>Contact Information</h4>
@@ -435,7 +421,7 @@
                 </div>
               </div>
             </div>
-            <div class="contact-form-right" style="width: 60%">
+            <div class="contact-form-right" >
               <div class="form-input-container">
                 <div class="name-input">
                   <div>
@@ -536,8 +522,6 @@
     </main>
 
     <script src="./data.js"></script>
-    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
-    <!-- Compiled, minified JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript">
       // jQuery
@@ -575,25 +559,18 @@
           instance.next();
         }
       }
-
-
     </script>
     <script>
-      // Initialize variables
       var currentSlideIndex = 0;
       var totalSlides = document.querySelectorAll('.carousel-item').length;
   
       function showSlide(index) {
-          // Hide all slides
           var slides = document.querySelectorAll('.carousel-item');
           slides.forEach(slide => slide.style.display = 'block');
           
-          // Show the current slide
           if (index >= totalSlides) currentSlideIndex = 0;
           if (index < 0) currentSlideIndex = totalSlides - 1;
           slides[currentSlideIndex].style.display = 'block';
-  
-          // Update dots
           updateDots();
       }
   
@@ -612,11 +589,7 @@
           dots.forEach(dot => dot.classList.remove('active'));
           dots[currentSlideIndex].classList.add('active');
       }
-  
-      // Initialize the first slide and dot
       showSlide(currentSlideIndex);
-  
-      // Automatically move to the next slide every 3 seconds
       setInterval(() => {
           moveCarousel(1);
       }, 3000);
